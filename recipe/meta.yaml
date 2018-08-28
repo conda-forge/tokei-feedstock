@@ -1,4 +1,4 @@
-{% set version = "7.0.3" %}
+{% set version = "8.0.0" %}
 
 package:
   name: tokei
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Aaronepower/tokei/archive/v{{ version }}.tar.gz
-  sha256: 47848921f7f04fdd1ef515b2db25b931f97471f4b178c7914b3646251bcd8086
+  sha256: 1d8ae0302adc1c63c78e9f5c3444c7a94a29fc429610168a6d1aa567e6a6a327
 
 build:
   number: 0
