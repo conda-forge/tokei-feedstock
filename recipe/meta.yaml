@@ -1,5 +1,7 @@
 {% set version = "8.0.1" %}
 
+{% set native = 'm2w64-' if win else '' %}
+
 package:
   name: tokei
   version: {{ version }}
@@ -9,11 +11,13 @@ source:
   sha256: 9d365695e3c790747d982bf0dc598f2a65b7e51b90fa98d4f34dfef72a019e13
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - rust
+    - binutils              # [linux]
+    - {{native}}binutils    # [win]
 
 test:
   commands:
