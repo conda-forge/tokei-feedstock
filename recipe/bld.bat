@@ -1,6 +1,6 @@
 :: build
-cargo build   --features all --release         || goto :error
-cargo install --features all --root "%PREFIX%" || goto :error
+cargo build   --features all --release                  || goto :error
+cargo install --features all --root "%PREFIX%" --path . || goto :error
 
 :: strip debug symbols
 strip "%PREFIX%\bin\tokei.exe" || goto :error
