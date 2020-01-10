@@ -11,12 +11,12 @@ source:
   sha256: ad203224b891ec75208d86b296d02f08770e0a4b6421827b1bac397fddd996ab
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - rust
-    - binutils              # [linux]
+    - {{ compiler('c') }}   # [unix]
     - {{native}}binutils    # [win]
 
 test:
