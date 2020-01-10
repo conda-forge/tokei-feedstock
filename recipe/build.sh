@@ -3,8 +3,10 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 # build statically linked binary with Rust
-cargo build --features all --release
-cargo install --features all --root "$PREFIX" --path .
+cargo install --locked --features all --root "$PREFIX" --path .
 
 # strip debug symbols
-strip "$PREFIX/bin/tokei"
+"$STRIP" "$PREFIX/bin/tokei"
+
+# remove extra build file
+rm -f "${PREFIX}/.crates.toml"
