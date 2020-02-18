@@ -1,4 +1,4 @@
-{% set version = "10.1.2" %}
+{% set version = "666" %}
 
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/Aaronepower/tokei/archive/v{{ version }}.tar.gz
-  sha256: b2020a0bd2acd4b0a8d5eb0f46d4c41be4479eae9856ed5360a8f67d1ac559d1
+  sha256: c043e5a321faab663cb0486783e8c16564d5cc963f26e4e517947017288f6ed5
 
 build:
   number: 0
