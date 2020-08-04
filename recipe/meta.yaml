@@ -1,4 +1,4 @@
-{% set version = "12.0.4" %}
+{% set version = "4012.0.4" %}
 
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/Aaronepower/tokei/archive/v{{ version }}.tar.gz
-  sha256: 031dabbe1253af53fea8258e11eeb352371b6cf0c790db573ca7be33f761c733
+  sha256: bb11a5143db15f11a0cdea610c32bb1252d8066a8636a1cc414e76d614d71611
 
 build:
   number: 0
@@ -32,7 +32,7 @@ about:
     grouped by language.
   dev_url: https://github.com/Aaronepower/tokei
   doc_url: https://github.com/Aaronepower/tokei#how-to-use-tokei
-  license_file: 'LICENCE-MIT'
+  license_file: LICENCE-MIT
 
 extra:
   recipe-maintainers:
