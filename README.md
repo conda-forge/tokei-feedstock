@@ -8,13 +8,13 @@ Package license: MIT
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tokei-feedstock/blob/master/LICENSE.txt)
 
 Summary: Tokei is a program that displays statistics about your code. Tokei will show
-number of files, total lines within those files and code, comments, and blanks
-grouped by language.
+the number of files, total lines within those files and code, comments, and
+blanks grouped by language.
 
 
-Development: https://github.com/Aaronepower/tokei
+Development: https://github.com/XAMPPRocky/tokei
 
-Documentation: https://github.com/Aaronepower/tokei#how-to-use-tokei
+Documentation: https://github.com/XAMPPRocky/tokei#how-to-use-tokei
 
 Current build status
 ====================
