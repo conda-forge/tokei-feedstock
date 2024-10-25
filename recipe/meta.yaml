@@ -1,6 +1,4 @@
-{% set version = "12.1.1" %}
-
-{% set native = 'm2w64-' if win else '' %}
+{% set version = "12.1.2" %}
 
 package:
   name: tokei
@@ -8,16 +6,17 @@ package:
 
 source:
   url: https://github.com/XAMPPRocky/tokei/archive/v{{ version }}.tar.gz
-  sha256: c8b94ddd3ffe3d712d8a63c9e90cf32bb4506c3ecc51c357cf399417bc7afcc8
+  sha256: 81ef14ab8eaa70a68249a299f26f26eba22f342fb8e22fca463b08080f436e50
 
 build:
   number: 0
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}   # [unix]
-    - {{ native }}binutils    # [win]
+    - {{ stdlib("c") }}
+    - cargo-bundle-licenses
 
 test:
   commands:
@@ -32,7 +31,9 @@ about:
     blanks grouped by language.
   dev_url: https://github.com/XAMPPRocky/tokei
   doc_url: https://github.com/XAMPPRocky/tokei#how-to-use-tokei
-  license_file: 'LICENCE-MIT'
+  license_file:
+    - LICENCE-MIT
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:

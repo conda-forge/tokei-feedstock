@@ -1,12 +1,21 @@
+@echo on
+
+set CARGO_PROFILE_RELEASE_STRIP=symbols
+set CARGO_PROFILE_RELEASE_LTO=fat
+
 :: build
-cargo install --locked --features all --root "%PREFIX%" --path . || goto :error
+cargo install --locked ^
+    --root "%PREFIX%" ^
+    --path . ^
+    --features all ^
+    --no-track ^
+    || goto :error
 
-:: strip debug symbols
-strip "%PREFIX%\bin\tokei.exe" || goto :error
-goto :EOF
-
-:: remove extra build file
-del /F /Q "%PREFIX%\.crates.toml"
+:: dump licenses
+cargo-bundle-licenses ^
+    --format yaml ^
+    --output "%SRC_DIR%\THIRDPARTY.yml" ^
+    || goto :error
 
 goto :EOF
 
