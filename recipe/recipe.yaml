@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 14.0.0
+  version: "15.0.0"
 
 package:
   name: tokei
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/XAMPPRocky/tokei/archive/v${{ version }}.tar.gz
-  sha256: 4e561dbb83ef1b46359714fc623fd45eddfb14821ece63a219470500fdd1cd26
+  sha256: 966da7b9a81ac6cb777b9f159f4c02e5b83a8b8bd30ebf5991007839926b600c
 
 build:
-  number: 1
+  number: 0
   script: build
 
 requirements:
